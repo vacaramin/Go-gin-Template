@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: helloworld
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    user: postgres 
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db-data:/var/lib/postgresql/data
+  migrate:
+    image: migrate/migrate
+    volumes:
+      - ./Migrations:/migrations
+    depends_on:
+      - db
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      'migrate -database "postgres://postgres:helloworld@db:5432/postgres?sslmode=disable" -path /migrations force 1 && yes | migrate -path /migrations -database "postgres://postgres:helloworld@db:5432/postgres?sslmode=disable" down &&
+      migrate -path /migrations -database "postgres://postgres:helloworld@db:5432/postgres?sslmode=disable" up'
+
+volumes:
+  db-data:
