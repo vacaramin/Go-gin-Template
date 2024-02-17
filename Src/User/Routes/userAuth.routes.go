@@ -1,7 +1,7 @@
 package user_routes
 
 import (
-	controllers "ProudFlowers-Backend/Src/User/Controllers"
+	controllers "gin-template/Src/User/Controllers"
 
 	"github.com/gin-gonic/gin"
 )

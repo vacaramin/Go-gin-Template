@@ -1,9 +1,9 @@
 package main
 
 import (
-	initializers "ProudFlowers-Backend/Initializers"
-	middleware "ProudFlowers-Backend/Middleware"
-	routes "ProudFlowers-Backend/Routes"
+	initializers "gin-template/Initializers"
+	middleware "gin-template/Middleware"
+	routes "gin-template/Routes"
 	"os"
 
 	"github.com/gin-gonic/gin"

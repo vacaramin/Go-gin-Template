@@ -1,4 +1,4 @@
-module ProudFlowers-Backend
+module gin-template
 
 go 1.21
 

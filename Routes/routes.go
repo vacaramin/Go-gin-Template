@@ -1,8 +1,8 @@
 package routes
 
 import (
-	middleware "ProudFlowers-Backend/Middleware"
-	user_routes "ProudFlowers-Backend/Src/User/Routes"
+	middleware "gin-template/Middleware"
+	user_routes "gin-template/Src/User/Routes"
 
 	"github.com/gin-gonic/gin"
 )

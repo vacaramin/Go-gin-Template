@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"ProudFlowers-Backend/Src/utils"
+	"gin-template/Src/utils"
 	"log"
 	"net/http"
 

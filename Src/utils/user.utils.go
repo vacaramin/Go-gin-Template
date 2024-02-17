@@ -1,9 +1,9 @@
 package utils
 
 import (
-	initializers "ProudFlowers-Backend/Initializers"
-	model "ProudFlowers-Backend/Src/User/Model"
 	"errors"
+	initializers "gin-template/Initializers"
+	model "gin-template/Src/User/Model"
 	"net/http"
 	"os"
 	"time"

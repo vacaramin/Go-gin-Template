@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	initializers "ProudFlowers-Backend/Initializers"
-	model "ProudFlowers-Backend/Src/User/Model"
-	"ProudFlowers-Backend/Src/utils"
 	"fmt"
+	initializers "gin-template/Initializers"
+	model "gin-template/Src/User/Model"
+	"gin-template/Src/utils"
 	"log"
 	"net/http"
 	"os"
